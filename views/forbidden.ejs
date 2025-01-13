@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/1.0.2/css/bulma.min.css">
+
+        <title>Bunny Web</title>
+    </head>
+
+    <body>
+        <header>
+            <nav class="navbar is-info" role="navigation" aria-label="main navigation">
+                <div class="navbar-brand">
+                    <a href="/" class="navbar-item">Bunny Web</a>
+                    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                </div>
+
+                <div class="navbar-menu">
+                    <div class="navbar-end">
+                        <div class="navbar-item">
+                            <div class="mx-3">
+                                <%= user.email %>
+                            </div>
+                            <div class="buttons">
+                                <%- (!user ? '<a href="/user/login" class="button is-light">Login</a>' : '<a href="/user/logout" class="button is-light">Logout</a>') %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div id="app" class="px-6 py-5 has-background-white" style="height: 100vh;">
+            <div class="columns mt-5">
+                <div class="column is-8 is-offset-2">
+                    <div class="content is-medium">
+                        <h1 class="title">Forbidden</h1>
+                        <p>Oops! You don't have access to that page. Please contact the administrator for more information.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
