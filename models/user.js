@@ -5,7 +5,8 @@ const User = sequelize.define('user',
         email: DataTypes.STRING,
         password: DataTypes.STRING,
         active: DataTypes.TINYINT,
-        isAdmin: DataTypes.BOOLEAN
+        isAdmin: DataTypes.BOOLEAN,
+        username: DataTypes.STRING
     }
 )
 
